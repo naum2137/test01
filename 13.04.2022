@@ -1,0 +1,76 @@
+import numpy as np
+
+# zad1
+# a=np.array([1,2,3])
+# b=np.array([6,2,3])
+# c=a*b
+# print(c)
+
+# zad2
+# a=np.array([[1,2,3],[1,2,3],[1,2,3]])
+# b=np.array([[6,2,3,4],[6,2,3,4],[6,0,3,4],[6,2,3,4]])
+# print(a.max())
+# print(a.min())
+# print(b.max())
+# print(b.min())
+
+# zad3
+
+# a=np.array([1,2,3])
+# b=np.array([6,2,3])
+# c=a/b
+# print(c)
+
+# zad4
+#
+# a=np.array([1,2,3])
+# b=np.array([6.4,2.55,np.pi])
+# c=a*b
+# print(c)
+
+# zad5
+
+# a=np.random.rand(3,2)*10
+# print(np.sin(a))
+# print(a)
+
+# zad6
+
+# a=np.random.rand(3,2)*10
+# print(np.cos(a))
+# print(a)
+
+#zad7
+
+# a=np.random.rand(3,3)*10
+# print(a)
+# for c in a:
+#     print(f'{c}')
+#
+
+# zad8
+# a=np.random.rand(3,3)*10
+# print(a)
+# for c in a:
+#     for d in c:
+#      print(f'{d}')
+
+# zad9
+# a=np.random.rand(3,3)*10
+# print(a)
+# for c in a.flat:
+#     for d in c.flat:
+#      print(f'{d}')
+
+#zad10
+
+# a = np.random.rand(9, 9) * 10
+# b=a.reshape(1,81)
+# c=a.reshape(3,27)
+# d=a.reshape(27,3)
+# e=a.reshape(81,1)
+# print(a)
+# print(b)
+# print(c)
+# print(d)
+# print(e)
