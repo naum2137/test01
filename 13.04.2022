@@ -16,16 +16,16 @@ import numpy as np
 
 # zad3
 
-# a=np.array([1,2,3])
-# b=np.array([6,2,3])
-# c=a/b
+# a=np.random.rand(3,3)*10
+# b=np.random.rand(3,3)*10
+# c=a.dot(b)
 # print(c)
 
 # zad4
 #
 # a=np.array([1,2,3])
 # b=np.array([6.4,2.55,np.pi])
-# c=a*b
+# c=a@b
 # print(c)
 
 # zad5
