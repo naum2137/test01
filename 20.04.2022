@@ -1,0 +1,98 @@
+import pandas as pd
+import numpy as np
+
+s=pd.Series([1,3,5.5,np.nan,'a'])
+print(s)
+
+s1=pd.Series([10,12,8,14],index=['a','b','c','d'])
+print(s1)
+
+dane={'kraj':['belgia','indie','brazylia'],
+      'stolica':['bruksela','new delhi','brasilia'],
+      'Populacja':[111232,234324,23452344]}
+
+df=pd.DataFrame(dane)
+print(df)
+print(df.dtypes)
+
+daty=pd.date_range('20220420',periods=5)
+print(daty)
+
+df2 = pd.DataFrame(np.random.randn(5,4),index=daty,columns=list('ABCD'))
+print(df2)
+
+
+df=pd.read_csv('iris.csv',header=0,sep=',',decimal='.')
+print(df)
+# df.to_csv('nowy.csv',index=False)
+
+
+# xlsx = pd.ExcelFile('wyniki.xlsx')
+# df=pd.read_excel(xlsx,header=0)
+# print(df)
+# df.to_excel('nowy.xlsx',index=False,sheet_name='arkusz1')
+
+# print(s1['a'])
+# print(s1.a)
+
+# print(df['stolica'])
+
+# print(df.iloc[[0]])
+# print(df.loc[[0],['kraj']])
+# print(df.at[0,'kraj'])
+
+# print('kraj: '+ df.kraj)
+#
+# print(df.sample(1))
+# print(df.sample(3))
+# print(df.sample(frac=0.5))
+#
+# print(df.sample(10,replace=True))
+#
+# print(df.head())
+# print(df.head(1))
+# irisdf=pd.read_csv('iris.csv',header=0,sep=',',decimal='.')
+# print(irisdf)
+# print(irisdf.head(10))
+# print(irisdf.tail(10))
+
+# print("")
+# print(s1)
+# print(s1[(s1>9)])
+#
+# print(s1.where(s1>10))
+# print(s1.where(s1>10,'element za maly'))
+# seria=s1.copy()
+# print(seria)
+# seria.where(seria>10,'element za maly',inplace=True)
+# print(seria)
+
+
+# print(s1[~(s1>10)])
+# print(s1[(s1>13)&(s1>8)])
+
+# print(df[df['Populacja']>1200000])
+# print(df[((df.Populacja>100000)&(df.index.isin([0,2])))])
+
+# szukaj=['belgia','brasilia']
+# print(df.isin(szukaj))
+
+# s1['e']=15
+# print(s1)
+
+# df.loc[3]='nowy element'
+# df.loc[4]=['Polska','Warszawa',2345234]
+# print(df)
+# df.drop([3],inplace=True)
+# print(df)
+# df.drop('kraj',axis=1,inplace=True)
+# print(df)
+
+df['Kontynent']=['Europa','Azja','Ameryka Polnocna','Europa']
+print(df)
+
+print(df.sort_values(by='kraj'))
+grupa=df.groupby(['kontynent'])
+print(grupa.get_group('Europa'))
+print(df.get_group['Kontynent']).agg()
+
