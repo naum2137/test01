@@ -1,0 +1,51 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+ts =pd.Series(np.random.rand(1000))
+#
+ts =ts.cumsum()
+# print(ts)
+# ts.plot()
+# plt.savefig('wykres.png')
+# plt.show()
+
+data ={'Kraj':['Belgia','Indie','Brazylia','Polska'],
+       'Stolica':['Bruksela','New Delni','Brazilia','Warszawa'],
+       'Populacja':[11231231,1234444,2222234,1233453],
+       'Kontynent':['Europa','Azja','Ameryka','Europa']}
+
+df=pd.DataFrame(data)
+# print(df)
+
+grupa=df.groupby('Kontynent').agg({'Populacja':['sum']})
+# print(grupa)
+#
+# grupa.plot(kind='bar',xlabel='kontynent',ylabel='Populacja w mld',rot=0,title='Populacja dla kontynentu')
+# plt.show()
+
+
+# es= grupa.plot.bar()
+# es.set_xlabel('Kontynenty')
+# es.set_ylabel('Populacja')
+# es.tick_params(axis='x',labelrotation=1)
+# es.legend()
+# es.set_title('Populacja dla kontynentu')
+# plt.savefig('wykres2.png')
+# plt.show()
+
+# df =pd.read_csv('dane.csv',header=0,sep=';',decimal='.')
+# print(df)
+# grupa = df.groupby('Imię i nazwisko').agg({'Wartość zamównienia':['sum']})
+# print(grupa)
+#
+# grupa.plot.pie(subplots=True,autopct='%. 2f %%',figsize=(6,6),fontsize=20,legend=(0,0))
+# plt.show()
+
+df =pd.DataFrame(ts)
+
+df['Średnia krocząca']=df.rolling(window=60).mean
+df.plot()
+plt.legend()
+plt.show()
