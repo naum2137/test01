@@ -1,0 +1,63 @@
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+# zad 1
+
+# x1 = np.array([0,5,10])
+# y1 = np.log(2*(x1))
+# y2 = (-4*(x1))+2
+# y3 = 2*np.cos(x1)
+# plt.plot(x1,y1,'g-',label='y1')
+# plt.plot(x1,y2,'r',label='y2')
+# plt.plot(x1,y3,'b:',label='y3')
+# plt.ylabel('wykres funkcji')
+# plt.xlabel('x')
+# plt.grid()
+# plt.legend()
+# plt.title('tytul zad 1')
+# plt.savefig('cw1.png')
+# plt.show()
+
+# zad2
+# xlec =pd.ExcelFile('ceny41.xlsx')
+# dff=pd.read_excel(xlec,header=0)
+# df=pd.DataFrame(dff)
+# # pol = df['Wartosc'].mean()                                   #średnia z kolumny "Wartość"
+# pol = df.groupby(['Miesiące','Rodzaje towarów i usług']).agg({'Wartosc':['mean']})
+# # pol2 = df.groupby(['Miesiące']).describe()
+# # kk = 'Rodzaje towarów i usług'
+#
+# Produkt1 = df.groupby('Miesiące')['Wartosc'].mean()
+# Produkt2 = df.groupby('Rodzaje towarów i usług')['Wartosc'].mean()
+# pol00 =pol['Wartosc']
+#
+# plt.plot(pol,pol,'r--')
+# plt.ylabel('y')
+# plt.xlabel('x')
+# plt.legend(labels=['34345'],title='rrr')
+# plt.savefig('cw2.jpg',format='jpg')
+# plt.show()
+
+# zad 3
+
+# df = pd.read_csv('cechy41.csv',decimal=',',header=0,sep=';')
+# 
+# plt.subplot(2,1,1)
+# poli1 = df['Cecha1'].head(200)
+# poli1.plot.bar()
+# plt.ylabel('koks')
+# plt.xlabel('kokos')
+# plt.legend(title='tytul')
+# plt.title('tytul')
+# 
+# plt.subplot(2,1,2)
+# poli = df['Cecha2'].head(200)
+# poli.plot.bar()
+# plt.ylabel('koks')
+# plt.xlabel('kokos')
+# plt.legend(title='tytul')
+# plt.title('hhh')
+# 
+# plt.savefig('cw3.png')
+# plt.show()
