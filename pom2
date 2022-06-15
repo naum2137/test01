@@ -1,0 +1,23 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# zad1
+
+#zad2
+# wykres punktowy
+# xl = pd.ExcelFile('orca_share_media1655281776365_6942754975739012992.xlsx')
+# kk = pd.read_excel(xl,header=0)
+# df = pd.DataFrame(kk)
+# x=df['Wartość']
+# y=df['Rodzaje towarów']
+# plt.scatter(x,y,color = 'red')
+# plt.ylabel('os y')
+# plt.xlabel('os x')
+# plt.title('tytul zad1')
+# plt.legend(labels=['cos'],loc=1,title='Michał')
+# # plt.text(0,0,'kkk')
+# plt.savefig('zad2.png',format=('png'))
+# plt.show()
+
+# zad3
